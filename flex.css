@@ -1,0 +1,622 @@
+/* =========================
+   BASIC SETTINGS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f8f8f6;
+    color: #171717;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+section {
+    padding: 90px 8%;
+}
+
+
+/* =========================
+   NAVBAR - FLEXBOX
+========================= */
+
+header {
+    background: #ffffff;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.navbar {
+    min-height: 75px;
+    padding: 0 8%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.nav-links a {
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #777;
+}
+
+.nav-button {
+    background: #171717;
+    color: white;
+    padding: 11px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+
+/* =========================
+   HERO - FLEXBOX
+========================= */
+
+.hero {
+    min-height: 650px;
+    background: #eeeeea;
+
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 70px;
+}
+
+.hero-text {
+    flex: 1;
+    max-width: 600px;
+}
+
+.small-title,
+.section-title {
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: clamp(45px, 6vw, 75px);
+    line-height: 1.05;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    display: block;
+    color: #666;
+}
+
+.hero-text>p {
+    color: #555;
+    max-width: 500px;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.primary-btn,
+.secondary-btn {
+    display: inline-flex;
+    padding: 13px 24px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.primary-btn {
+    background: #171717;
+    color: white;
+}
+
+.secondary-btn {
+    border: 1px solid #171717;
+}
+
+.hero-image {
+    flex: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-box {
+    width: 400px;
+    height: 400px;
+    background: #171717;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+    text-align: center;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 2px solid white;
+    border-radius: 50%;
+
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.image-box h2 {
+    font-size: 40px;
+    letter-spacing: 8px;
+}
+
+
+/* =========================
+   ABOUT - FLEXBOX
+========================= */
+
+.about {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    background: white;
+}
+
+.about-image,
+.about-content {
+    flex: 1;
+}
+
+.about-image {
+    min-height: 420px;
+    background: #deded9;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-card {
+    background: #171717;
+    color: white;
+    padding: 40px;
+    text-align: center;
+}
+
+.about-card h2 {
+    font-size: 55px;
+}
+
+.about-content h2 {
+    font-size: 42px;
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    color: #555;
+    margin-bottom: 18px;
+}
+
+
+/* =========================
+   SERVICES - FLEXBOX
+========================= */
+
+.services {
+    background: #f8f8f6;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 50px;
+}
+
+.section-heading h2 {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+.section-heading>p:last-child {
+    color: #666;
+}
+
+.service-container {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+}
+
+.service-card {
+    background: white;
+    padding: 40px 30px;
+    flex: 1;
+
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+}
+
+.icon {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.service-card h3 {
+    font-size: 23px;
+    margin-bottom: 12px;
+}
+
+.service-card p {
+    color: #666;
+}
+
+
+/* =========================
+   PRODUCTS - FLEXBOX
+========================= */
+
+.products {
+    background: white;
+}
+
+.product-container {
+    display: flex;
+    gap: 25px;
+}
+
+.product-card {
+    flex: 1;
+    background: #f6f6f3;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.product-image {
+    height: 280px;
+    background: #deded9;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.product-info {
+    padding: 25px;
+}
+
+.product-info h3 {
+    font-size: 22px;
+}
+
+.product-info p {
+    color: #666;
+    margin: 5px 0 15px;
+}
+
+.product-info strong {
+    font-size: 20px;
+}
+
+
+/* =========================
+   CTA - FLEXBOX
+========================= */
+
+.cta {
+    background: #171717;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.cta h2 {
+    font-size: 38px;
+}
+
+.cta p {
+    color: #bbbbbb;
+}
+
+.cta-button {
+    background: white;
+    color: #171717;
+    padding: 14px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+
+/* =========================
+   CONTACT - FLEXBOX
+========================= */
+
+.contact {
+    background: #eeeeea;
+
+    display: flex;
+    gap: 80px;
+}
+
+.contact-content,
+.contact form {
+    flex: 1;
+}
+
+.contact-content h2 {
+    font-size: 45px;
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.contact-content>p:last-child {
+    color: #666;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    border: 1px solid #cccccc;
+    padding: 15px;
+    font-family: inherit;
+    font-size: 15px;
+    background: white;
+}
+
+.contact textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.contact button {
+    padding: 15px;
+    border: none;
+    background: #171717;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+/* =========================
+   FOOTER - FLEXBOX
+========================= */
+
+footer {
+    background: #111111;
+    color: white;
+    padding: 50px 8% 25px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.footer-content h2 {
+    letter-spacing: 4px;
+}
+
+.footer-content p {
+    color: #999;
+}
+
+.footer-links {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: #bbbbbb;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+.copyright {
+    border-top: 1px solid #333;
+    padding-top: 20px;
+    color: #777;
+    font-size: 13px;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 20px 6%;
+    }
+
+    .logo {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero-content,
+    .about,
+    .contact {
+        flex-direction: column;
+    }
+
+    .hero {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+
+    .hero-text {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .hero-text>p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .image-box {
+        width: 330px;
+        height: 330px;
+    }
+
+    .about {
+        gap: 40px;
+    }
+
+    .service-container,
+    .product-container {
+        flex-wrap: wrap;
+    }
+
+    .service-card,
+    .product-card {
+        flex: 1 1 45%;
+    }
+
+    .contact {
+        gap: 40px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    section {
+        padding: 65px 6%;
+    }
+
+    .nav-links {
+        width: 100%;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .nav-button {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .image-box {
+        width: 280px;
+        height: 280px;
+    }
+
+    .image-box h2 {
+        font-size: 28px;
+    }
+
+    .service-container,
+    .product-container {
+        flex-direction: column;
+    }
+
+    .service-card,
+    .product-card {
+        width: 100%;
+    }
+
+    .section-heading h2 {
+        font-size: 35px;
+    }
+
+    .about-content h2,
+    .contact-content h2 {
+        font-size: 35px;
+    }
+
+    .cta {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .cta h2 {
+        font-size: 30px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
